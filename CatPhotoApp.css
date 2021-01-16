@@ -1,0 +1,187 @@
+import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+
+body{
+    background: linear-gradient(35deg, #CCFFFF,#FFCCCC) no-repeat; 
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.black-text {
+    font-family: "Roboto Mono", monospace;
+    font-size:35px;
+    background-color: rgba(192, 191, 191, 0.212); /* . e pentru clasa*/
+    text-align: center;
+    padding: 10px;
+}
+
+.black-text:hover {color:#CCFFFF;}
+
+p  {
+    font-size: 16px;
+    font-family:"Roboto Mono", monospace;
+    text-align: center;
+}
+
+ol, ul {
+    padding-left: 47%;
+    position: relative;
+}
+
+ul {
+    animation-name: move;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+    @keyframes move {
+        0% {
+            right: 0px;
+            left: 0px;
+    
+        }
+        50% {
+            right: 50px;
+            left: 15px;
+        }
+        100% {
+            right: 0px;
+            left: 0px;
+    
+        }
+        }
+
+li {font-family:"Roboto Mono", monospace;
+    text-align: justify;}
+   
+.heart {
+    position: absolute;
+    margin: auto;
+    top: 700px;
+    right: -700px;
+    left: 0;
+    background-color: pink;
+    box-shadow: 15px 10px rgba(143, 142, 142, 0.151);
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+    
+      }
+      .heart:after {
+        background-color: pink;
+        content: "";
+        border-radius: 90%;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0px;
+        left: 25px;
+      }
+      .heart:before {
+        background-color: pink;
+        content: "";
+        border-radius: 90%;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: -25px;
+        left: 0px;
+      }
+
+      .heart:hover, .heart:hover::after, .heart:hover:before {
+        animation-name: background-color;
+        animation-duration: 500ms;
+        animation-fill-mode: forwards; 
+    }
+
+    
+      @keyframes beat {
+        0% {
+          transform: scale(1) rotate(-45deg);
+        }
+        50% {
+          transform: scale(0.6) rotate(-45deg);
+        }
+      }
+
+
+form {font-family:"Roboto Mono", monospace;}
+
+img {
+    width: 500px;
+    border-color:gray;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 47%; /* or 10px for 50%*/
+    box-shadow: 25px 10px 0 0 rgba(192, 191, 191, 0.212);
+    margin:auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display:flex;
+    justify-content:center;
+    transform: skewX(-2deg);
+    transform: skewY(-2deg);
+    animation-name: fade;
+    animation-duration: 10s;
+}
+
+    @keyframes fade {
+        50% {
+        left: 60%;
+        opacity:0.1;
+
+        }
+    }
+
+    img:hover {transform: scale(1.1);
+        cursor: pointer;
+        animation:none;}
+
+.cat-link{color:#FFCCCC;}
+
+#cat-photo-form { /*# e pentru ID*/
+    animation-name: colourful-form;
+    animation-duration: 7s;
+    background-color: rgba(192, 191, 191, 0.212);
+    text-align: center;
+    padding: 20px, 47%, 50px, 20px;
+}
+
+    [type='checkbox'] {
+        margin: 10px 0px 15px 0px;} /* [] e pentru atribut */
+
+    @keyframes colourful-form {
+        0%{
+            background-color: rgba(192, 191, 191, 0.212);
+        }
+        50% {
+            background-color: #FFCCCC;
+        }
+        70% {
+            background-color:#CCFFFF;
+        }
+    }
+
+footer{
+    font-size: 0.95em;
+    margin-top: 20px;
+    text-align:center;
+    color: rgb(143, 142, 142);
+    font-family:"Lobster", monospace;
+}
+
+footer:hover {
+    animation-name: text-color;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;}
+
+    @keyframes text-color {
+        100% {
+            color: #584270;
+            }
+        }
