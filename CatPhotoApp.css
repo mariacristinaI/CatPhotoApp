@@ -1,4 +1,4 @@
-import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
 
 body{
     background: linear-gradient(35deg, #CCFFFF,#FFCCCC) no-repeat; 
@@ -6,32 +6,45 @@ body{
     min-height: 100vh;
 }
 
-.black-text {
+h1 {
     font-family: "Roboto Mono", monospace;
     font-size:35px;
-    background-color: rgba(192, 191, 191, 0.212); /* . e pentru clasa*/
+    background-color: rgba(192, 191, 191, 0.212);
     text-align: center;
     padding: 10px;
 }
+    h1:hover {color:#CCFFFF;}
 
-.black-text:hover {color:#CCFFFF;}
+.flex {
+    display: flex; flex-direction: row; justify-content: center; padding: 4px;
+    background-color:rgba(192, 191, 191, 0.212);
+}
+    .flex div {
+        padding: 4px; font-size: 19px; text-align: center;
+    }
 
-p  {
+p, legend {
     font-size: 16px;
     font-family:"Roboto Mono", monospace;
     text-align: center;
 }
 
-ol, ul {
-    padding-left: 47%;
+ol, fieldset {
     position: relative;
+    padding: 0;
+    margin: 1% 1% 1% 1%;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
-ul {
+fieldset {
     animation-name: move;
     animation-duration: 20s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
+    margin: 1% 1% 1% 1%;
+    float: right;
+    border: none;
 }
 
     @keyframes move {
@@ -51,8 +64,15 @@ ul {
         }
         }
 
-li {font-family:"Roboto Mono", monospace;
-    text-align: justify;}
+ol {
+    margin: 1% 1% 1% 1%;
+    float: left;
+}
+
+
+li, fieldset {font-family:"Roboto Mono", monospace;
+    text-align: justify;
+    font-size: 19px;}
    
 .heart {
     position: absolute;
@@ -110,7 +130,7 @@ li {font-family:"Roboto Mono", monospace;
 
 form {font-family:"Roboto Mono", monospace;}
 
-img {
+.mainphoto {
     width: 500px;
     border-color:gray;
     border-width: 2px;
@@ -138,13 +158,13 @@ img {
         }
     }
 
-    img:hover {transform: scale(1.1);
+    .mainphoto:hover {transform: scale(1.1);
         cursor: pointer;
         animation:none;}
 
 .cat-link{color:#FFCCCC;}
 
-#cat-photo-form { /*# e pentru ID*/
+#cat-photo-form {
     animation-name: colourful-form;
     animation-duration: 7s;
     background-color: rgba(192, 191, 191, 0.212);
@@ -153,7 +173,7 @@ img {
 }
 
     [type='checkbox'] {
-        margin: 10px 0px 15px 0px;} /* [] e pentru atribut */
+        margin: 10px 0px 15px 0px;}
 
     @keyframes colourful-form {
         0%{
@@ -166,6 +186,44 @@ img {
             background-color:#CCFFFF;
         }
     }
+
+#sr-only {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.photos {
+    width: 70%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+}
+
+.catphoto {
+    max-width: 281px;
+    max-height: 270px;
+    height: auto;
+    border:2px solid gray;
+    opacity: 90%;
+}
+    .catphoto:hover {
+        width: 500px;
+        height: 500px;
+    }
+
+figcaption {
+    text-align: center;
+    font-size: 19px;
+}
 
 footer{
     font-size: 0.95em;

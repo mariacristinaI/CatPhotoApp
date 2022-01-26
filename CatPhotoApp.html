@@ -1,56 +1,79 @@
 <!DOCTYPE html>
-
-<html>
-    <head>
-        <link type="text/css" rel="stylesheet" href="CatPhotoApp.css">
-        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-    </head>
-
-<body>
-
-      <h1 class="black-text"> CatPhotoApp </h1>
-
-      <img class="class1 class2" src="SleepingCat.jpeg" alt="Sleeping cat.">
-
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="A basic code training showcase featuring cats.">
+      <meta name="keywords" content="Cat, Photo App">
+      <meta name="author" content="Maria-Cristina Iosub">
+      <title>Cat Photos Incoming</title>
+      <link type="text/css" rel="stylesheet" href="CatPhotoApp.css">
+      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <h1> Cat Photo App </h1>
+    <main>
+      <section>
+        <img class="mainphoto" src="images/SleepingCat.jpeg" alt="Image of a sleeping cat.">
+        <br>
+        <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+        <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
+        <br>
+        <div class = 'flex'>
+          <fieldset><legend>Things cats love:</legend>
+            <br>
+            <input  id="one" type="radio" name="items" value="one">
+            <label for="one">cat nip</label><br>
+            <input id="two" type="radio" name="items" value="two">
+            <label for="two">laser pointers</label><br>
+            <input id="three" type="radio" name="items" value="three">
+            <label for="three">lasagna</label>
+          </fieldset>
+          <div><p>Top 3 things cats hate:</p>
+            <ol>
+              <li>Garfield</li>
+              <li>Sylvester</li>
+              <li>Showers</li>
+            </ol>
+          </div>
+        </div>
+        <div class="heart"></div>
+      </section> 
       <br>
-
-      <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-      <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
-
-      <br>
-
-      <p>Things cats love:</p>
-        <ul>
-          <li>cat nip</li>
-          <li>laser pointers</li>
-          <li>lasagna</li>
-        </ul><div class="heart"></div>
-      <p>Top 3 things cats hate:</p>
-        <ol>
-          <li>Garfield</li>
-          <li>Sylvester</li>
-          <li>Showers</li>
-        </ol>
-
-      <br>
-      
       <form id="cat-photo-form" action="https://freecatphotoapp.com/submit-cat-photo">
-          <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
-          <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br>
-          <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving"> Loving</label>
-          <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
-          <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br>
+          <br>
+          <legend>Is your cat an indoor or outdoor cat?</legend>
+            <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
+            <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br><br>
+          <legend>What's your cat's personality?</legend>
+            <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving"> Loving</label>
+            <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
+            <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br>
           <button type="submit">Submit</button>
-          <input type="text" placeholder="cat photo URL" required>
+          <input type="text" placeholder="URL of a cat photo" required>
       </form>
-
+      <br><br>
+      <section>
+        <p id="sr-only">Presented below are 3 pictures of the same white cat in different poses. Her name is Luna. She is lazy, but she is gentle.</p>
+        <div class="photos">
+          <figure>
+            <img class="catphoto" src="images/Overturned.png" alt="Image of a messy cat.">
+            <figcaption>Oooppss ..</figcaption>
+          </figure>
+          <figure>
+            <img class="catphoto" src="images/ReflectingUponLife.png" alt="Image of a cat thinking about life.">
+            <figcaption>Reflecting upon life.</figcaption>
+          </figure>
+          <figure>
+            <img class="catphoto" src="images/ShortNap.png" alt="Image of a cat napping.">
+            <figcaption>Taking a short nap.</figcaption>
+          </figure>
+        </div>
+      </section>
       <br>
-
-      <p>Click here to view more <a href="https://freecatphotoapp.com" class="cat-link"><strong>cat photos</strong></a>.</p>
-
-    <footer>&copy;2020 Maria-Cristina Iosub</footer>
-
-
-</body>
-
+    </main> 
+    <p>Click here to view more <a href="https://freecatphotoapp.com" class="cat-link"><strong>cat photos</strong></a>.</p>
+    <footer>&copy;2022 Maria-Cristina Iosub</footer>
+  </body>
 </html>
