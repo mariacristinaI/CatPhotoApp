@@ -209,21 +209,51 @@ form {font-family:"Roboto Mono", monospace;}
 }
 
 .catphoto {
+    display: block;
+    border:2px solid gray;
+    box-shadow:  5px 5px 5px rgba(143, 142, 142);
+    height: auto;
     max-width: 281px;
     max-height: 270px;
-    height: auto;
-    border:2px solid gray;
-    opacity: 90%;
+    transition: transform 0.20s ease;
 }
     .catphoto:hover {
-        width: 500px;
-        height: 500px;
+        transform: scale(1.5);
+        -webkit-transform: scale(1.5);
     }
 
 figcaption {
-    text-align: center;
     font-size: 19px;
+    text-align: center;
 }
+
+.marker {
+    height: 3px;
+    border-top: 1px solid rgba(0, 0, 0, 75%);
+    box-shadow:  0 0 20px 0 rgba(143, 142, 142);
+}
+    .yellow {
+        background: linear-gradient(90deg, rgb(255, 255, 0) 5%, rgb(0, 255, 255) 95%);
+    }
+    .cyan {
+        background: linear-gradient(hsl(186, 76%, 16%), rgb(0, 255, 255), hsl(240, 56%, 42%));
+      }
+      
+    .magenta {
+        background: linear-gradient(90deg, rgb(0, 255, 255) 30%, rgb(255, 0, 255));
+    }
+    .cap {
+        height: 3px;
+        width: 70px;
+    }
+    .sleeve {
+        background-color: rgba(255, 255, 255, 0.5);
+        height: 25px;
+        width: 135px;
+    }
+    .cap, .sleeve {
+        display: inline-block;
+    }
 
 footer{
     font-size: 0.95em;
