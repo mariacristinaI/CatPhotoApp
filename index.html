@@ -9,7 +9,7 @@
       <meta name="author" content="Maria-Cristina Iosub">
       <title>Cat Photos Incoming</title>
       <link type="text/css" rel="stylesheet" href="styles.css">
-      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+      <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
   </head>
   <body>
     <h1> Cat Photo App </h1>
@@ -28,7 +28,7 @@
             <input id="two" type="radio" name="items" value="two">
             <label for="two">laser pointers</label><br>
             <input id="three" type="radio" name="items" value="three">
-            <label for="three">lasagna</label>
+            <label for="three"><button class="js-modal-trigger" data-target="modal-js-example">Lasagna</button></label>
           </fieldset>
           <div><p>Top 3 things cats hate:</p>
             <ol>
@@ -84,8 +84,64 @@
         </div>
       </section>
       <br>
+      <!-- Hidden Modal ... -->
+        <section id="modal-js-example" class="modal">
+          <div class="modal-background"></div>
+          <div class="modal-content">
+            <div class="box">
+              <div class="modal-card-head">
+                <p class="modal-card-title">Nutrition Label</p>
+                <button class="delete" aria-label="close"></button>
+              </div>
+              <section class="modal-card-body">
+                <!-- Content ... -->
+                <div class="label">
+                  <h3 class="bold">Nutrition Facts for Lasagna with Meat & Sauce</h3>
+                  <div class="divider"></div>
+                  <p>1 Cup per container</p>
+                  <p class="bold">Serving Size <span class="right">1 cup (213g)</span></p>
+                  <div class="divider lg"></div>
+                  <div class="calories-info">
+                    <p class="bold sm-text">Amount per serving</p>
+                    <h3 class="bold">Calories <span class="right">280</span></h3>
+                  </div>
+                  <div class="divider md"></div>
+                  <div class="daily-value sm-text">
+                    <p class="right bold no-divider">% Daily Value *</p>
+                    <div class="divider"></div>
+                    <p><span class="bold">Total Fat</span> 11g<span class="bold right">-</span></p>
+                    <p class="indent no-divider">Saturated Fat 6g <span class="bold right">-</span></p>
+                    <div class="divider"></div>
+                    <p><span class="bold">Cholesterol</span> 30mg <span class="bold right"> - </span></p>
+                    <p><span class="bold">Sodium</span> 850mg <span class="bold right"> 36% </span></p>
+                    <p><span class="bold">Total Carbohydrate</span> 30g <span class="bold right"> - </span></p>
+                    <p><span class="bold no-divider">Protein</span> 16g <span class="bold right"> - </span></p>
+                    <p><span class="bold">Vitamins and Minerals</span> 30g <span class="bold right"> - </span></p>
+                    <p class="dbl-indent no-divider">Vitamin A 90μg <span class="bold right">10%</span></p>
+                    <div class="divider"></div>
+                    <p class="dbl-indent no-divider">Vitamin C 7.2mg <span class="bold right">12%</span></p>
+                    <div class="divider"></div>
+                    <p class="dbl-indent no-divider">Calcium 200mg <span class="bold right">20%</span></p>
+                    <div class="divider"></div>
+                    <p class="dbl-indent no-divider">Iron 0.5mg <span class="bold right">6%</span></p>
+                    <div class="divider md"></div>
+                    <p class="note">* The Percent Daily Values tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice. </p>
+                    <div class="divider lg"></div>
+                  </div>
+                </div>
+                <!-- Content ... -->
+              </section>
+              <div class="modal-card-foot">
+                <button class="button">Cancel</button>
+              </div>
+            </div>
+          </div>
+          <button class="modal-close is-large" aria-label="close"></button>
+        </section>
+
     </main> 
     <p>Click here to view more <a href="https://freecatphotoapp.com" class="cat-link"><strong>cat photos</strong></a>.</p>
     <footer>&copy;2022 Maria-Cristina Iosub</footer>
+    <script src="script.js"></script>
   </body>
 </html>
