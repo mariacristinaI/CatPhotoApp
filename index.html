@@ -9,28 +9,28 @@
       <meta name="author" content="Maria-Cristina Iosub">
       <title>Cat Photos Incoming</title>
       <link type="text/css" rel="stylesheet" href="styles.css">
-      <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
   </head>
   <body>
     <h1> Cat Photo App </h1>
     <main>
       <section>
-        <img class="mainphoto" src="images/SleepingCat.jpeg" alt="Image of a sleeping cat.">
-        <br>
+        <img id="mainphoto" src="images/SleepingCat.jpeg" alt="Image of a sleeping cat.">
+        <br/>
         <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
         <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
-        <br>
-        <div class = 'flex'>
-          <fieldset><legend>Things cats love:</legend>
-            <br>
-            <input  id="one" type="radio" name="items" value="one">
-            <label for="one">cat nip</label><br>
+        <br/>
+        <div class="flex">
+          <fieldset class="cat-preferences"><legend>Things cats love:</legend>
+            <br/>
+            <input id="one" type="radio" name="items" value="one">
+            <label for="one">cat nip</label><br/>
             <input id="two" type="radio" name="items" value="two">
-            <label for="two">laser pointers</label><br>
+            <label for="two">laser pointers</label><br/>
             <input id="three" type="radio" name="items" value="three">
             <label for="three"><button class="js-modal-trigger" data-target="modal-js-example">Lasagna</button></label>
           </fieldset>
-          <div><p>Top 3 things cats hate:</p>
+          <div class="cat-preferences"><p>Top 3 things cats hate:</p>
+            <br/>
             <ol>
               <li>Garfield</li>
               <li>Sylvester</li>
@@ -40,20 +40,20 @@
         </div>
         <div class="heart"></div>
       </section> 
-      <br>
+      <br/>
       <form id="cat-photo-form" action="https://freecatphotoapp.com/submit-cat-photo">
-          <br>
+          <br/>
           <legend>Is your cat an indoor or outdoor cat?</legend>
             <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
-            <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br><br>
+            <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor"> Outdoor</label><br/><br/>
           <legend>What's your cat's personality?</legend>
             <label for="loving"><input id="loving" type="checkbox" name="personality" value="loving"> Loving</label>
             <label for="lazy"><input id="lazy" type="checkbox" name="personality" value="lazy"> Lazy</label>
-            <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br>
+            <label for="energetic"><input id="energetic" type="checkbox" name="personality" value="energetic"> Energetic</label><br/>
           <button type="submit">Submit</button>
           <input type="text" placeholder="URL of a cat photo" required>
       </form>
-      <br><br>
+      <br/><br/>
       <section>
         <p id="sr-only">Presented below are 3 pictures of the same white cat in different poses. Her name is Luna. She is lazy, but she is gentle.</p>
         <div class="photos">
@@ -83,7 +83,7 @@
           </figure>
         </div>
       </section>
-      <br>
+      <br/>
       <!-- Hidden Modal ... -->
         <section id="modal-js-example" class="modal">
           <div class="modal-background"></div>
@@ -138,10 +138,9 @@
           </div>
           <button class="modal-close is-large" aria-label="close"></button>
         </section>
-
     </main> 
-    <p>Click here to view more <a href="https://freecatphotoapp.com" class="cat-link"><strong>cat photos</strong></a>.</p>
-    <footer>&copy;2022 Maria-Cristina Iosub</footer>
+    <p>Click here to view more <a href="https://www.pinterest.com/FeliniRocks/cat-photography/" class="cat-link" accesskey="c" target="_blank"><strong>cat photos</strong></a>.</p>
+    <footer id="copyright"> &copy;<span id="year"></span> Maria-Cristina Iosub.</footer>
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,62 +1,76 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&family=Roboto+Mono&display=swap');
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 
+:root {
+    --smooth-gray: rgba(192, 191, 191, 0.212);
+    --light-cyan: #CCFFFF;
+    --light-pink: #FFCCCC;
+}
 * {
     box-sizing: border-box;
 }
 
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
 body{
-    background: linear-gradient(35deg, #CCFFFF,#FFCCCC) no-repeat; 
+    background: linear-gradient(35deg, var(--light-cyan),var(--light-pink)) no-repeat; 
     background-size: cover;
     min-height: 100vh;
 }
 
 h1 {
-    font-family: "Roboto Mono", monospace;
     font-size:35px;
-    background-color: rgba(192, 191, 191, 0.212);
-    text-align: center;
+    background-color: var(--smooth-gray);
     padding: 10px;
 }
-    h1:hover {color:#CCFFFF;}
+    h1:hover {color:var(--light-cyan);}
 
-.flex {
-    display: flex; flex-direction: row; justify-content: center; padding: 4px;
-    background-color:rgba(192, 191, 191, 0.212);
+h1, footer {
+    font-family: 'Cabin Sketch', cursive;
 }
-    .flex div {
-        padding: 4px; font-size: 19px; text-align: center;
-    }
-
-p, legend {
-    font-size: 16px;
-    font-family:"Roboto Mono", monospace;
+h1, .flex div, p, legend, #cat-photo-form, figcaption, footer {
     text-align: center;
 }
 
-ol, fieldset {
+.flex {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    background-color:var(--smooth-gray);
+}
+    .flex, .flex div {
+        padding: 4px;
+    }
+
+li, fieldset {
+    font-size: 17px;
+}
+
+p, legend, li, .cat-preferences, button, form {
+    font-family:"Roboto Mono", monospace;
+}
+
+ol, .cat-preferences {
     position: relative;
-    padding: 0;
-    margin: 1% 1% 1% 1%;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 0 100px;
+    margin: 1%;
 }
 
 fieldset {
+    border: none;
+    float: right;
     animation-name: move;
     animation-duration: 20s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-    margin: 1% 1% 1% 1%;
-    float: right;
-    border: none;
 }
 
     @keyframes move {
         0% {
             right: 0px;
             left: 0px;
-    
         }
         50% {
             right: 50px;
@@ -65,71 +79,63 @@ fieldset {
         100% {
             right: 0px;
             left: 0px;
-    
         }
-        }
+    }
 
 ol {
-    margin: 1% 1% 1% 1%;
     float: left;
 }
 
-li, fieldset, button {font-family:"Roboto Mono", monospace;
+li, fieldset {
     text-align: justify;
-    font-size: 19px;}
+}
    
 .heart {
-    position: absolute;
-    margin: auto;
-    top: 700px;
-    right: -700px;
-    left: 0;
     background-color: pink;
     box-shadow: 15px 10px rgba(143, 142, 142, 0.151);
     height: 50px;
     width: 50px;
+    position: absolute;
+    top: 700px;
+    right: -700px;
+    left: 0;
+    float:right;
+    margin: auto;
     transform: rotate(-45deg);
     animation-name: beat;
     animation-duration: 3s;
     animation-iteration-count:infinite;
-    
-      }
-      .heart:after {
+}
+    .heart:after, .heart:before {
         background-color: pink;
-        content: "";
         border-radius: 90%;
+        content: "";
         position: absolute;
         width: 50px;
         height: 50px;
-        top: 0px;
-        left: 25px;
-      }
-      .heart:before {
-        background-color: pink;
-        content: "";
-        border-radius: 90%;
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        top: -25px;
-        left: 0px;
-      }
-
-      .heart:hover, .heart:hover::after, .heart:hover:before {
+    }
+        .heart:after {
+            top: 0px;
+            left: 25px;
+        }
+        .heart:before {
+            top: -25px;
+            left: 0px;
+        }
+    .heart:hover, .heart:hover::after, .heart:hover:before {
         animation-name: background-color;
         animation-duration: 500ms;
         animation-fill-mode: forwards; 
     }
 
-    
-      @keyframes beat {
+    @keyframes beat {
         0% {
-          transform: scale(1) rotate(-45deg);
+            transform: scale(1) rotate(-45deg);
         }
         50% {
-          transform: scale(0.6) rotate(-45deg);
+            transform: scale(0.6) rotate(-45deg);
         }
-      }
+    }
 
 /** Nutrition Facts **/
 .label {
@@ -197,17 +203,15 @@ li, fieldset, button {font-family:"Roboto Mono", monospace;
         padding: 0 8px;
         text-indent: -8px;
     }
+/*End Nutrition Facts*/
 
-
-form {font-family:"Roboto Mono", monospace;}
-
-.mainphoto {
+#mainphoto {
     width: 500px;
     border-color:gray;
     border-width: 2px;
     border-style: solid;
     border-radius: 47%; /* or 10px for 50%*/
-    box-shadow: 25px 10px 0 0 rgba(192, 191, 191, 0.212);
+    box-shadow: 25px 10px 0 0 var(--smooth-gray);
     margin:auto;
     display: -webkit-box;
     display: -moz-box;
@@ -220,41 +224,41 @@ form {font-family:"Roboto Mono", monospace;}
     animation-name: fade;
     animation-duration: 10s;
 }
-
     @keyframes fade {
         50% {
         left: 60%;
         opacity:0.1;
-
         }
     }
 
-    .mainphoto:hover {transform: scale(1.1);
+    #mainphoto:hover {
+        transform: scale(1.1);
         cursor: pointer;
-        animation:none;}
+        animation:none;
+    }
 
-.cat-link{color:#FFCCCC;}
+.cat-link{color:var(--light-pink);}
 
 #cat-photo-form {
     animation-name: colourful-form;
     animation-duration: 7s;
-    background-color: rgba(192, 191, 191, 0.212);
-    text-align: center;
-    padding: 20px, 47%, 50px, 20px;
+    background-color: var(--smooth-gray);
+    padding: 20px 50px;
 }
 
     [type='checkbox'] {
-        margin: 10px 0px 15px 0px;}
+        margin: 10px 0px 15px 0px;
+    }
 
     @keyframes colourful-form {
-        0%{
-            background-color: rgba(192, 191, 191, 0.212);
+        0% {
+            background-color: var(--smooth-gray);
         }
         50% {
-            background-color: #FFCCCC;
+            background-color: var(--light-pink);
         }
         70% {
-            background-color:#CCFFFF;
+            background-color:var(--light-cyan);
         }
     }
 
@@ -267,16 +271,16 @@ form {font-family:"Roboto Mono", monospace;}
 }
 
 .photos {
-    width: 70%;
-    margin: 0 auto;
+    display: flex;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    display: flex;
     align-items: center;
     justify-content: center;
     line-height: 1.4;
+    margin: 0 auto;
+    width: 70%;
 }
 
 .catphoto {
@@ -284,19 +288,13 @@ form {font-family:"Roboto Mono", monospace;}
     border:2px solid gray;
     box-shadow:  5px 5px 5px rgba(143, 142, 142);
     height: auto;
-    max-width: 281px;
     max-height: 270px;
     transition: transform 0.20s ease;
 }
     .catphoto:hover {
-        transform: scale(1.5);
-        -webkit-transform: scale(1.5);
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
     }
-
-figcaption {
-    font-size: 19px;
-    text-align: center;
-}
 
 .marker {
     height: 3px;
@@ -320,18 +318,16 @@ figcaption {
     .sleeve {
         background-color: rgba(255, 255, 255, 0.5);
         height: 25px;
-        width: 135px;
+        width: 50%;
     }
     .cap, .sleeve {
         display: inline-block;
     }
 
 footer{
+    color: rgb(143, 142, 142);
     font-size: 0.95em;
     margin-top: 20px;
-    text-align:center;
-    color: rgb(143, 142, 142);
-    font-family:"Lobster", monospace;
 }
 
 footer:hover {
@@ -342,5 +338,5 @@ footer:hover {
     @keyframes text-color {
         100% {
             color: #584270;
-            }
         }
+    }
