@@ -317,8 +317,8 @@ li, fieldset {
     }
     .sleeve {
         background-color: rgba(255, 255, 255, 0.5);
-        height: 25px;
         width: 50%;
+        height: 25px;
     }
     .cap, .sleeve {
         display: inline-block;
@@ -340,3 +340,36 @@ footer:hover {
             color: #584270;
         }
     }
+
+@media only screen and (max-width: 768px) {
+    #mainphoto {
+        width: 270px;
+    }
+    p, legend, label, li, button, input, footer {
+        font-size: 12px;
+    }
+    .flex {
+        flex-direction: column;
+    }
+    fieldset.cat-preferences {
+        padding: 0 10px 0 20px;
+    }
+    .heart {
+        position: fixed;
+        top: auto;
+        right: auto;
+        left: auto;
+    }
+    .sleeve {
+        background-color: transparent;
+    }
+    .photos {
+        display: grid;
+        align-items: baseline;
+        width: 100%;
+    }
+    .catphoto {
+        width: 100%;
+        height: 70%;
+    }
+}
