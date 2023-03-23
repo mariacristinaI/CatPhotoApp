@@ -7,10 +7,6 @@ const cat = {
 };
 console.log(cat.greeting);
 
-const today = new Date();
-let currentYear = today.getFullYear();
-document.getElementById("year").innerHTML = currentYear;
-
 /*** BULMA JS ***/
 document.addEventListener('DOMContentLoaded', () => {
     function openModal($el) {
