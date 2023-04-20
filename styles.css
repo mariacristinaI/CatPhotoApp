@@ -27,11 +27,14 @@ h1 {
 }
     h1:hover {color:var(--light-cyan);}
 
-h1, footer {
+h1, h2, footer {
     font-family: 'Cabin Sketch', cursive;
 }
-h1, .flex div, p, legend, #cat-photo-form, figcaption, footer {
+h1, h2, .flex div, p, legend, #cat-photo-form, figcaption, footer {
     text-align: center;
+}
+h2 {
+    font-size: 28px;
 }
 
 .flex {
@@ -45,7 +48,7 @@ h1, .flex div, p, legend, #cat-photo-form, figcaption, footer {
     }
 
 img {
-    filter: grayscale(70%);
+    filter: grayscale(27%);
 }
     img:hover {
         filter: grayscale(0);
@@ -221,11 +224,11 @@ li, fieldset {
 /*End Nutrition Facts*/
 
 #mainphoto {
-    width: 500px;
+    width: 320px;
     border-color:gray;
     border-width: 2px;
     border-style: solid;
-    border-radius: 47%; /* or 10px for 50%*/
+    /*border-radius: 47%;  or 10px for 50%*/
     box-shadow: 25px 10px 0 0 var(--smooth-gray);
     margin:auto;
     display: -webkit-box;
@@ -237,7 +240,7 @@ li, fieldset {
     transform: skewX(-2deg);
     transform: skewY(-2deg);
     animation-name: fade;
-    animation-duration: 10s;
+    animation-duration: 3s;
 }
     @keyframes fade {
         50% {
@@ -259,7 +262,7 @@ li, fieldset {
     animation-name: colourful-form;
     animation-duration: 7s;
     background-color: var(--smooth-gray);
-    padding: 20px 50px;
+    padding: 0 50px 20px 50px;
 }
 
     [type='checkbox'] {
@@ -366,6 +369,9 @@ footer:hover {
 @media only screen and (max-width: 768px) {
     #mainphoto {
         width: 270px;
+    }
+    h2 {
+        font-size: 18px;
     }
     p, legend, label, li, button, input, footer {
         font-size: 12px;
