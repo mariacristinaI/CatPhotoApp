@@ -2,10 +2,11 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
 
 :root {
-    --smooth-gray: rgba(192, 191, 191, 0.212);
-    --light-cyan: #CCFFFF;
-    --light-pink: #FFCCCC;
+    --smooth-gray: #c0bfbf36;
+    --light-cyan: #DEFFFF;
+    --light-pink: #FFE4E4;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -14,58 +15,87 @@ html:focus-within {
     scroll-behavior: smooth;
 }
 
-body{
-    background: linear-gradient(35deg, var(--light-cyan),var(--light-pink)) no-repeat; 
+body {
+    background: linear-gradient(35deg, var(--light-cyan), var(--light-pink)) no-repeat;
     background-size: cover;
     min-height: 100vh;
 }
 
+main {
+    background: #fff;
+    border-radius: 17px;
+    box-shadow: 0px 30px 50px #4132641f;
+    margin: 25px auto;
+    padding: 23px;
+    max-width: 750px;
+}
+
 h1 {
     background-color: var(--smooth-gray);
-    font-size:35px;
+    font-size: 35px;
     padding: 10px;
 }
-    h1:hover {color:var(--light-cyan);}
 
-h1, h2, footer {
+h1,
+h2,
+footer {
     font-family: 'Cabin Sketch', cursive;
 }
-h1, h2, .flex div, p, legend, #cat-photo-form, figcaption, footer {
+
+h1,
+h2,
+.flex div,
+p,
+legend,
+#cat-photo-form,
+figcaption,
+footer {
     text-align: center;
 }
+
 h2 {
     font-size: 28px;
 }
 
 .flex {
-    background-color:var(--smooth-gray);
-    display: flex; 
-    flex-direction: row; 
+    background-color: var(--smooth-gray);
+    display: flex;
+    flex-direction: row;
     justify-content: center;
 }
-    .flex, .flex div {
-        padding: 4px;
-    }
+
+.flex,
+.flex div {
+    padding: 4px;
+}
 
 img {
     filter: grayscale(27%);
 }
-    img:hover {
-        filter: grayscale(0);
-    }
 
-li, fieldset {
+img:hover {
+    filter: grayscale(0);
+}
+
+li,
+fieldset {
     font-size: 17px;
 }
 
-p, legend, li, .cat-preferences, button, form {
-    font-family:"Roboto Mono", monospace;
+p,
+legend,
+li,
+.cat-preferences,
+button,
+form {
+    font-family: "Roboto Mono", monospace;
 }
 
-ol, .cat-preferences {
-    position: relative;
+ol,
+.cat-preferences {
     margin: 1%;
-    padding: 0 100px;
+    padding: 0 90px;
+    position: relative;
 }
 
 fieldset {
@@ -77,29 +107,36 @@ fieldset {
     animation-iteration-count: infinite;
 }
 
-    @keyframes move {
-        0% {
-            right: 0px;
-            left: 0px;
-        }
-        50% {
-            right: 50px;
-            left: 15px;
-        }
-        100% {
-            right: 0px;
-            left: 0px;
-        }
+@keyframes move {
+    0% {
+        right: 0px;
+        left: 0px;
     }
+
+    50% {
+        right: 50px;
+        left: 15px;
+    }
+
+    100% {
+        right: 0px;
+        left: 0px;
+    }
+}
 
 ol {
     float: left;
 }
 
-li, fieldset {
+li,
+fieldset {
     text-align: justify;
 }
-   
+
+button {
+    cursor: pointer;
+}
+
 .heart {
     background-color: pink;
     box-shadow: 15px 10px rgba(143, 142, 142, 0.151);
@@ -109,51 +146,61 @@ li, fieldset {
     top: 700px;
     right: -700px;
     left: 0;
-    float:right;
+    float: right;
     margin: auto;
     transform: rotate(-45deg);
     animation-name: beat;
     animation-duration: 3s;
-    animation-iteration-count:infinite;
+    animation-iteration-count: infinite;
 }
-    .heart:after, .heart:before {
-        background-color: pink;
-        border-radius: 90%;
-        content: "";
-        position: absolute;
-        height: 50px;
-        width: 50px;
-    }
-        .heart:after {
-            top: 0px;
-            left: 25px;
-        }
-        .heart:before {
-            top: -25px;
-            left: 0px;
-        }
-    .heart:hover, .heart:hover::after, .heart:hover:before {
-        animation-name: faster-beat;
-        animation-duration: 500ms;
-        animation-fill-mode: forwards; 
+
+.heart:after,
+.heart:before {
+    background-color: pink;
+    border-radius: 90%;
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+}
+
+.heart:after {
+    top: 0px;
+    left: 25px;
+}
+
+.heart:before {
+    top: -25px;
+    left: 0px;
+}
+
+.heart:hover,
+.heart:hover::after,
+.heart:hover:before {
+    animation-name: faster-beat;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes beat {
+    0% {
+        transform: scale(1) rotate(-45deg);
     }
 
-    @keyframes beat {
-        0% {
-            transform: scale(1) rotate(-45deg);
-        }
-        50% {
-            transform: scale(0.6) rotate(-45deg);
-        }
+    50% {
+        transform: scale(0.6) rotate(-45deg);
     }
-    @keyframes faster-beat {
-        50% {
-            transform: scale(1) rotate(-45deg);
-        }
-        70% {
-            transform: scale(0.7) rotate(-45deg);
-        }
+}
+
+@keyframes faster-beat {
+    50% {
+        transform: scale(1) rotate(-45deg);
     }
+
+    70% {
+        transform: scale(0.7) rotate(-45deg);
+    }
+}
 
 /** Nutrition Facts **/
 .label {
@@ -162,101 +209,120 @@ li, fieldset {
     padding: 0 7px;
     width: 300px;
 }
-    .label h3 {
-        font-size: 18px;
-        letter-spacing: 0.15px;
-        margin: 2px 0;
-        text-align: center;
-    }
-    .divider {
-        border-bottom: 1px solid #888989;
-        clear: right;
-        margin: 2px 0;
-    }
-        .lg {
-            height: 10px;
-        }
-        .lg, .md {
-            background-color: black;
-            border: 0;
-        }
-        .md {
-            height: 5px;
-        }
-        .dbl-indent {
-            margin-left: 2em !important;
-          }
-    .label p {
-        font-weight: initial;
-        margin: 0;
-        text-align: justify;
-    }
-        .bold {
-            font-weight: 800 !important;
-        }
-        .right {
-            float: right;
-        }
-        .sm-text {
-            font-size: 0.85rem;
-        }
-        .indent {
-            margin-left: 1em !important;
-        }
-    .calories-info h3 {
-        margin: -5px -2px;
-        overflow: hidden;
-        text-align: left;
-    }
-    .calories-info span {
-        font-size: 1.2em;
-        margin-top: -7px;
-    }
-    .daily-value p:not(.no-divider) {
-        border-bottom: 1px solid #888989;
-    }
-    .note {
-        font-size: 0.6rem;
-        margin: 5px 0;
-        padding: 0 8px;
-        text-indent: -8px;
-    }
+
+.label h3 {
+    font-size: 18px;
+    letter-spacing: 0.15px;
+    margin: 2px 0;
+    text-align: center;
+}
+
+.divider {
+    border-bottom: 1px solid #888989;
+    clear: right;
+    margin: 2px 0;
+}
+
+.lg {
+    height: 10px;
+}
+
+.lg,
+.md {
+    background-color: black;
+    border: 0;
+}
+
+.md {
+    height: 5px;
+}
+
+.dbl-indent {
+    margin-left: 2em !important;
+}
+
+.label p {
+    font-weight: initial;
+    margin: 0;
+    text-align: justify;
+}
+
+.bold {
+    font-weight: 800 !important;
+}
+
+.right {
+    float: right;
+}
+
+.sm-text {
+    font-size: 0.85rem;
+}
+
+.indent {
+    margin-left: 1em !important;
+}
+
+.calories-info h3 {
+    margin: -5px -2px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.calories-info span {
+    font-size: 1.2em;
+    margin-top: -7px;
+}
+
+.daily-value p:not(.no-divider) {
+    border-bottom: 1px solid #888989;
+}
+
+.note {
+    font-size: 0.6rem;
+    margin: 5px 0;
+    padding: 0 8px;
+    text-indent: -8px;
+}
+
 /*End Nutrition Facts*/
 
-#mainphoto {
-    width: 320px;
-    border-color:gray;
+#main-photo {
+    width: 270px;
+    border-color: gray;
     border-width: 2px;
     border-style: solid;
     /*border-radius: 47%;  or 10px for 50%*/
     box-shadow: 25px 10px 0 0 var(--smooth-gray);
-    margin:auto;
+    margin: auto;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
-    display:flex;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
     transform: skewX(-2deg);
     transform: skewY(-2deg);
     animation-name: fade;
     animation-duration: 3s;
 }
-    @keyframes fade {
-        50% {
+
+@keyframes fade {
+    50% {
         left: 60%;
-        opacity:0.1;
-        }
+        opacity: 0.1;
     }
+}
 
-    #mainphoto:hover {
-        animation:none;
-        border-color: #ddeeee;
-        cursor: pointer;
-        transform: scale(1.1);
-    }
+#main-photo:hover {
+    animation: none;
+    border-color: #ddeeee;
+    cursor: pointer;
+}
 
-.cat-link{color:var(--light-pink);}
+.cat-link {
+    color: #dfaab4;
+}
 
 #cat-photo-form {
     animation-name: colourful-form;
@@ -265,21 +331,23 @@ li, fieldset {
     padding: 0 50px 20px 50px;
 }
 
-    [type='checkbox'] {
-        margin: 10px 0px 15px 0px;
+[type='checkbox'] {
+    margin: 10px 0px 15px 0px;
+}
+
+@keyframes colourful-form {
+    0% {
+        background-color: var(--smooth-gray);
     }
 
-    @keyframes colourful-form {
-        0% {
-            background-color: var(--smooth-gray);
-        }
-        50% {
-            background-color: var(--light-pink);
-        }
-        70% {
-            background-color:var(--light-cyan);
-        }
+    50% {
+        background-color: var(--light-pink);
     }
+
+    70% {
+        background-color: var(--light-cyan);
+    }
+}
 
 #sr-only {
     position: absolute;
@@ -299,57 +367,75 @@ li, fieldset {
     justify-content: center;
     line-height: 1.4;
     margin: 0 auto;
-    width: 70%;
 }
 
 figure {
-    margin: 0 27px 27px 0;
+    margin: 0 27px;
 }
 
-.catphoto {
+.cat-photo~figcaption {
+    background-color: #dadada;
+    border: 2px solid gray;
+    position: relative;
+    z-index: 1;
+}
+
+.cat-photo {
     display: block;
-    border:2px solid gray;
-    box-shadow:  5px 5px 5px rgba(143, 142, 142);
+    border: 2px solid gray;
+    box-shadow: 5px 5px 5px rgba(143, 142, 142);
     height: auto;
     max-height: 270px;
     transition: transform 0.20s ease-in-out;
 }
-    .catphoto:hover {
-        border-color: var(--light-pink);
-        box-shadow: 5px 5px 5px rgba(0,0,0,0.7);
-        transform: scale(1.2);
-        -webkit-transform: scale(1.2);
-    }
+
+.cat-photo:hover {
+    border-color: var(--light-pink);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+}
+
+.cat-photo:hover~figcaption {
+    border: 1px solid var(--light-pink);
+}
 
 .marker {
     border-top: 1px solid rgba(0, 0, 0, 75%);
-    box-shadow:  0 0 20px 0 rgba(143, 142, 142);
+    box-shadow: 0 0 20px 0 rgba(143, 142, 142);
     height: 3px;
 }
-    .yellow {
-        background: linear-gradient(90deg, rgb(255, 255, 0) 5%, rgb(0, 255, 255) 95%);
-    }
-    .cyan {
-        background: linear-gradient(hsl(186, 76%, 16%), rgb(0, 255, 255), hsl(240, 56%, 42%));
-      }
-      
-    .magenta {
-        background: linear-gradient(90deg, rgb(0, 255, 255) 30%, rgb(255, 0, 255));
-    }
-    .cap {
-        height: 3px;
-        width: 70px;
-    }
-    .sleeve {
-        background-color: rgba(255, 255, 255, 0.5);
-        height: 25px;
-        width: 50%;
-    }
-    .cap, .sleeve {
-        display: inline-block;
-    }
 
-footer{
+.yellow {
+    background: linear-gradient(90deg, rgb(255, 255, 0) 5%, rgb(0, 255, 255) 95%);
+}
+
+.cyan {
+    background: linear-gradient(hsl(186, 76%, 16%), rgb(0, 255, 255), hsl(240, 56%, 42%));
+}
+
+.magenta {
+    background: linear-gradient(90deg, rgb(0, 255, 255) 30%, rgb(255, 0, 255));
+}
+
+.cap {
+    height: 3px;
+    width: 70px;
+}
+
+.sleeve {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 25px;
+    width: 50%;
+}
+
+.cap,
+.sleeve {
+    display: inline-block;
+}
+
+footer {
     color: rgb(143, 142, 142);
     font-size: 0.95em;
     margin-top: 20px;
@@ -358,45 +444,64 @@ footer{
 footer:hover {
     animation-name: text-color;
     animation-duration: 500ms;
-    animation-fill-mode: forwards;}
+    animation-fill-mode: forwards;
+}
 
-    @keyframes text-color {
-        100% {
-            color: #584270;
-        }
+@keyframes text-color {
+    100% {
+        color: #584270;
     }
+}
 
 @media only screen and (max-width: 768px) {
-    #mainphoto {
+    #main-photo {
         width: 270px;
     }
+
     h2 {
         font-size: 18px;
     }
-    p, legend, label, li, button, input, footer {
+
+    p,
+    legend,
+    label,
+    li,
+    button,
+    input,
+    footer {
         font-size: 12px;
     }
+
     .flex {
         flex-direction: column;
     }
+
     fieldset.cat-preferences {
         padding: 0 10px 0 20px;
     }
+
     .heart {
         position: fixed;
         top: auto;
         right: auto;
         left: auto;
     }
+
     .sleeve {
         background-color: transparent;
     }
+
     .photos {
         display: grid;
         align-items: baseline;
         width: 100%;
     }
-    .catphoto {
+
+    figure {
+        margin: auto;
+    }
+
+    .cat-photo {
         height: 70%;
         width: 100%;
     }

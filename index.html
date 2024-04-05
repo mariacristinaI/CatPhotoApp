@@ -11,10 +11,10 @@
       <link type="text/css" rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1> Cat Photo App </h1>
+    <h1> Paws & Pixels | Basics</h1>
     <main>
       <section>
-        <img id="mainphoto" src="images/WatchingCat.JPG" alt="Image of a sleeping cat.">
+        <img id="main-photo" src="images/WatchingCat.JPG" alt="Image of a sleeping cat.">
         <br/>
         <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
         <p>Purr jump eat the grass rip the couch scratched sunbathe, shed everywhere rip the couch sleep in the sink fluffy fur catnip scratched.</p>
@@ -42,7 +42,7 @@
       </section> 
       <br/>
       <h2>Are you a cat owner? Let's see your cat.</h2>
-      <form id="cat-photo-form" action="https://freecatphotoapp.com/submit-cat-photo">
+      <form id="cat-photo-form" action="https://formsubmit.co/640bb843532f339c173840039f71b10e" method="POST">
           <br/>
           <legend>Is your cat an indoor or outdoor cat?</legend>
             <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked> Indoor</label>
@@ -54,38 +54,41 @@
           <button type="submit">Submit</button>
           <input type="text" placeholder="URL of a cat photo" required>
       </form>
-      <br/><br/>
-      <section>
-        <p id="sr-only">Presented below are 3 pictures of the same white cat in different poses. Her name is Luna. She is lazy, but she is gentle.</p>
-        <div class="photos">
-          <figure>
-            <img class="catphoto" src="images/Overturned.png" alt="Image of a messy cat.">
-            <div class="marker yellow">
-              <div class="cap"></div>
-              <div class="sleeve"></div>
-            </div>
-            <figcaption>Oooppss ..</figcaption>
-          </figure>
-          <figure>
-            <img class="catphoto" src="images/ReflectingUponLife.png" alt="Image of a cat thinking about life.">
-            <div class="marker cyan">
-              <div class="cap"></div>
-              <div class="sleeve"></div>
-            </div>
-            <figcaption>Reflecting upon life.</figcaption>
-          </figure>
-          <figure>
-            <img class="catphoto" src="images/ShortNap.png" alt="Image of a cat napping.">
-            <div class="marker magenta">
-              <div class="cap"></div>
-              <div class="sleeve"></div>
-            </div>
-            <figcaption>Taking a short nap.</figcaption>
-          </figure>
-        </div>
+      <p>You can check the other submitted cats <button class="js-modal-trigger" data-target="cats-gallery">here</button> too.</p>
+      <!-- Gallery of cats ... -->
+      <section id="cats-gallery" class="modal">
+        <div class="modal-background"></div>
+            <p id="sr-only">Presented below are 3 pictures of the same white cat in different poses. Her name is Luna. She is lazy, but she is gentle.</p>
+            <div class="photos">
+              <figure>
+                <img class="cat-photo" src="images/Overturned.png" alt="A messy cat with eyes closed.">
+                <div class="marker yellow">
+                  <div class="cap"></div>
+                  <div class="sleeve"></div>
+                </div>
+                <figcaption>Oooppss ..</figcaption>
+              </figure>
+              <figure>
+                <img class="cat-photo" src="images/ReflectingUponLife.png" alt="A cat thinking about life.">
+                <div class="marker cyan">
+                  <div class="cap"></div>
+                  <div class="sleeve"></div>
+                </div>
+                <figcaption>Reflecting upon life.</figcaption>
+              </figure>
+              <figure>
+                <img class="cat-photo" src="images/ShortNap.png" alt="A cat napping.">
+                <div class="marker magenta">
+                  <div class="cap"></div>
+                  <div class="sleeve"></div>
+                </div>
+                <figcaption>Taking a short nap.</figcaption>
+              </figure>
+          </div>
+          <button class="modal-close is-large" aria-label="close"></button>
       </section>
       <br/>
-      <!-- Hidden Modal ... -->
+      <!-- Nutrition Label for Lasagna ... -->
         <section id="modal-js-example" class="modal">
           <div class="modal-background"></div>
           <div class="modal-content">
@@ -141,7 +144,7 @@
         </section>
     </main> 
     <p>Click here to view more <a href="https://www.pinterest.com/FeliniRocks/cat-photography/" class="cat-link" accesskey="c" target="_blank"><strong>cat photos</strong></a>.</p>
-    <footer id="copyright"> &copy;<span id="year">2021</span> Maria-Cristina Iosub.</footer>
+    <footer id="copyright"> &copy;<span id="year">2021</span> Coded by <a href="https://maria-cristinaiosub.vercel.app/home" target="_blank">Maria-Cristina Iosub</a>.</footer>
     <script src="script.js"></script>
   </body>
 </html>
